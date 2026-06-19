@@ -9,7 +9,7 @@ st.title("Transaction Amounts by Month and Transaction Type")
 # Example dataframe
 # Replace this with your actual dataframe loading logic
 df = pd.read_csv("data.csv")
-
+df['amount'] = df['amount'].apply(lambda y: abs(y))
 # Sample data
 
 # Convert month to string if needed
